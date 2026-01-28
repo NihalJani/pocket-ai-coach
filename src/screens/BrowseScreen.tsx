@@ -1,0 +1,28 @@
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import { Colors } from '../constants/colors';
+import { Spacing, Typography, CommonStyles } from '../constants/styles';
+
+export default function BrowseScreen() {
+    return (
+        <View style={CommonStyles.container}>
+            <View style={[CommonStyles.centerContent, CommonStyles.padding]}>
+                <Text style={styles.emptyText}>No coaches yet</Text>
+                <Text style={styles.emptySubtext}>Coaches will appear here in Phase 2</Text>
+            </View>
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    emptyText: {
+        fontSize: Typography.sizes.lg,
+        color: Colors.textMuted,
+        marginBottom: Spacing.xs,
+    },
+    emptySubtext: {
+        fontSize: Typography.sizes.sm,
+        color: Colors.textMuted,
+        textAlign: 'center',
+    },
+});
